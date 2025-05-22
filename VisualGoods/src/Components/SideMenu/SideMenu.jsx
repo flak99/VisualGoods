@@ -14,7 +14,7 @@ export function SideMenu() {
     return (
       <button
         onClick={onHandleHiding}
-        className="shadow-lgtransition-all m-3 ml-auto flex h-10 w-10 items-center justify-center rounded-xl bg-blue-400 duration-300 hover:scale-110 hover:cursor-pointer hover:bg-blue-300"
+        className="m-3 ml-auto flex h-10 w-10 items-center justify-center rounded-xl bg-slate-50 shadow-lg transition-all duration-300 ease-in-out hover:scale-110 hover:cursor-pointer"
       >
         <RiExpandDiagonalFill color="black" size={25} />
       </button>
@@ -23,7 +23,7 @@ export function SideMenu() {
 
   return (
     <>
-      <div className="ml-auto flex h-screen w-1/4 flex-col bg-blue-400 shadow-lg">
+      <div className="duration 300 ml-auto flex h-screen w-1/4 flex-col rounded-tl-lg rounded-bl-lg bg-slate-50 shadow-lg transition-all delay-200 ease-in-out">
         <ShrinkButton hidding={onHandleHiding} />
         <GoodList />
       </div>
