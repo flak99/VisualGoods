@@ -2,10 +2,11 @@ import { useState } from "react";
 import { RiExpandDiagonalFill } from "react-icons/ri";
 import { ShrinkButton } from "./ShrinkButton";
 import { GoodList } from "./GoodList/GoodList";
-import { SubmitGoodsButton } from "./SubmitGoodsButton";
+import { SelectedGoodsModal } from "../Modals/SelectedGoodsModal";
 
 export function SideMenu() {
   const [isHidden, setIsHidden] = useState(true);
+  const [isHiddenModal, setIsHiddenModal] = useState(false);
 
   function onHandleHiding() {
     setIsHidden((prev) => !prev);
@@ -25,6 +26,9 @@ export function SideMenu() {
 
       {/* Tło - Panel ThreeJS */}
       <div className="fixed inset-0 z-0 bg-gray-500"></div>
+
+      {/* Lista Wybranych Artykułów  */}
+      <SelectedGoodsModal isModalHidden={isHiddenModal} />
 
       {/* Panel boczny  */}
       {!isHidden && (
