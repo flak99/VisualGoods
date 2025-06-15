@@ -6,7 +6,6 @@ import { SelectedGoodsModal } from "../Modals/SelectedGoodsModal";
 
 export function SideMenu() {
   const [isHidden, setIsHidden] = useState(true);
-  const [isHiddenModal, setIsHiddenModal] = useState(false);
 
   function onHandleHiding() {
     setIsHidden((prev) => !prev);
@@ -28,7 +27,7 @@ export function SideMenu() {
       <div className="fixed inset-0 z-0 bg-gray-500"></div>
 
       {/* Lista Wybranych Artykułów  */}
-      <SelectedGoodsModal isModalHidden={isHiddenModal} />
+      <SelectedGoodsModal />
 
       {/* Panel boczny  */}
       {!isHidden && (
