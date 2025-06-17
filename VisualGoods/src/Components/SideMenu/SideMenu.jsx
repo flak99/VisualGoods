@@ -2,7 +2,7 @@ import { useState } from "react";
 import { RiExpandDiagonalFill } from "react-icons/ri";
 import { ShrinkButton } from "./ShrinkButton";
 import { GoodList } from "./GoodList/GoodList";
-import { SelectedGoodsModal } from "../Modals/SelectedGoodsModal";
+import { SelectedGoodsModal } from "../Modals/SelectedGoods/SelectedGoodsModal";
 
 export function SideMenu() {
   const [isHidden, setIsHidden] = useState(true);
