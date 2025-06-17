@@ -8,7 +8,7 @@ export function AddGoodsButton({ productsName }) {
       onClick={() => alert(productsName)}
       className="mr-2 ml-auto h-5 w-5 hover:cursor-pointer"
     >
-      <FaPlusSquare color={colorForButton} size={20} />
+      <FaPlusSquare color={colorForButton} size={20} title="Dodaj towar" />
     </button>
   );
 }
