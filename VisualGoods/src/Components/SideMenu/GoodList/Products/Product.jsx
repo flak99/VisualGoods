@@ -2,7 +2,11 @@ import { AddGoodsButton } from "./AddGoodsButton";
 
 export function Product({ filteredTowary }) {
   if (filteredTowary.length === 0) {
-    return <div className="bg-red-300">Brak wybuk</div>;
+    return (
+      <p className="flex justify-center font-bold text-gray-500 italic">
+        Brak wyników
+      </p>
+    );
   }
 
   return filteredTowary.map((towar, index) => (
