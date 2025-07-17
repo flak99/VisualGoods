@@ -1,0 +1,100 @@
+[
+  {
+    "nazwa": "Porotherm 24",
+    "id": "POR24",
+    "wymiary": {
+      "szerokość": "10",
+      "długość": "10",
+      "wysokość": "10"
+    },
+    "wymiary3D": {
+      "szerokość3D": "10",
+      "długość3D": "10",
+      "wysokość3D": "10"
+    }
+  },
+  {
+    "nazwa": "Porotherm 12",
+    "id": "POR12",
+    "wymiary": {
+      "szerokość": "5",
+      "długość": "5",
+      "wysokość": "5"
+    },
+    "wymiary3D": {
+      "szerokość3D": "5",
+      "długość3D": "5",
+      "wysokość3D": "5"
+    }
+  },
+  {
+    "nazwa": "Silka 24",
+    "id": "SIL24",
+    "wymiary": {
+      "szerokość": "5",
+      "długość": "5",
+      "wysokość": "5"
+    },
+    "wymiary3D": {
+      "szerokość3D": "5",
+      "długość3D": "5",
+      "wysokość3D": "5"
+    }
+  },
+  {
+    "nazwa": "Silka 18",
+    "id": "SIL18",
+    "wymiary": {
+      "szerokość": "5",
+      "długość": "5",
+      "wysokość": "5"
+    },
+    "wymiary3D": {
+      "szerokość3D": "5",
+      "długość3D": "5",
+      "wysokość3D": "5"
+    }
+  },
+  {
+    "nazwa": "Ytong 24",
+    "id": "YT24",
+    "wymiary": {
+      "szerokość": "5",
+      "długość": "5",
+      "wysokość": "5"
+    },
+    "wymiary3D": {
+      "szerokość3D": "5",
+      "długość3D": "5",
+      "wysokość3D": "5"
+    }
+  },
+  {
+    "nazwa": "Termobet 24",
+    "id": "TER24",
+    "wymiary": {
+      "szerokość": "5",
+      "długość": "5",
+      "wysokość": "5"
+    },
+    "wymiary3D": {
+      "szerokość3D": "5",
+      "długość3D": "5",
+      "wysokość3D": "5"
+    }
+  },
+  {
+    "nazwa": "Termobet 12",
+    "id": "TER12",
+    "wymiary": {
+      "szerokość": "53",
+      "długość": "52",
+      "wysokość": "52"
+    },
+    "wymiary3D": {
+      "szerokość3D": "5",
+      "długość3D": "5",
+      "wysokość3D": "5"
+    }
+  }
+]
