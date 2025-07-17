@@ -17,7 +17,7 @@ export function GoodList() {
         <SearchInput searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
 
         <div className="flex h-[600px] max-h-[600px] w-full flex-col overflow-auto bg-slate-50">
-          <Product filteredTowary={filteredTowary} />
+          <Product filteredTowary={filteredTowary} towary={towary} />
         </div>
         <div className="flex h-[12.5%] w-full items-center justify-around">
           <InfoButton buttonText={"Lista Pojazdów"} />
