@@ -15,7 +15,7 @@ export function Product({ filteredTowary }) {
       key={index}
     >
       {towar.nazwa}
-      <AddGoodsButton productsName={towar.nazwa} />
+      <AddGoodsButton productsName={towar} />
     </div>
   ));
 }

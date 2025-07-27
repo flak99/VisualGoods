@@ -2,7 +2,7 @@ import { useState } from "react";
 import { InfoButton } from "../InfoButton";
 import { SearchInput } from "../SearchInput";
 import { Product } from "./Products/Product";
-import towary from "/Projekty/VisualGoods/VisualGoods/src/assets/data.json";
+import towary from "/Projekty/JavaScript/VisualGoods/VisualGoods/src/assets/data.json";
 
 export function GoodList() {
   const [searchTerm, setSearchTerm] = useState("");

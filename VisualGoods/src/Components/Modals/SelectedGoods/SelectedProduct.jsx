@@ -1,28 +1,6 @@
-import { FaGreaterThanEqual, FaMinusSquare } from "react-icons/fa";
-import { Product } from "../../SideMenu/GoodList/Products/Product";
+import { FaMinusSquare } from "react-icons/fa";
 
-const selectedProductList = [
-  "H+H 23",
-  "Porotherm 23",
-  "Silka 23",
-  "Ytong 23",
-  "H+H 12",
-  "Porotherm 12 ",
-  "Silka 12",
-  "Ytong 12",
-  "Silka 23",
-  "Ytong 23",
-  "H+H 12",
-  "Porotherm 12 ",
-  "Silka 12",
-  "Ytong 12",
-  "Silka 23",
-  "Ytong 23",
-  "H+H 12",
-  "Porotherm 12 ",
-  "Silka 12",
-  "Wełna organiczna EVORETX 10m2",
-];
+const selectedProductList = [];
 
 export function SelectedProduct() {
   return selectedProductList.map((selectedProduct, index) => (
