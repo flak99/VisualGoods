@@ -1,9 +1,26 @@
 import { FaMinusSquare } from "react-icons/fa";
-import { SelectedProductsListContext } from "../../../context/SelectedProductsListContext";
 import { useContext } from "react";
+import { SelectedProductsListContext } from "../../../context/SelectedProductsListContext";
+import { SummaryElementsValue } from "../../../context/SummaryElementsValue";
 
 export function SelectedProduct() {
-  const [goodsForVisualisation] = useContext(SelectedProductsListContext);
+  const [goodsForVisualisation, setGoodsForVisualisation] = useContext(
+    SelectedProductsListContext,
+  );
+
+  const [summary, setSummary] = useContext(SummaryElementsValue);
+
+  const usunProduct = (deleteID) => {
+    setGoodsForVisualisation((prev) =>
+      prev.filter((p) => p.nazwa !== deleteID),
+    );
+  }; // Ważne do notatek
+
+  const showElemnetsSummary = (id, value) => {
+    setSummary((prev) => ({ ...prev, [id]: value }));
+
+    console.log(summary);
+  };
 
   return (
     <>
@@ -18,15 +35,18 @@ export function SelectedProduct() {
             type="number"
             min="1"
             max="10"
-            defaultValue={1}
+            value={summary[userGoods.id] || 0}
+            onChange={(e) => showElemnetsSummary(userGoods.id, e.target.value)}
             className="w-10 rounded-sm border border-black bg-slate-200 text-center"
           />
-
-          <FaMinusSquare
-            color="red"
-            className="ml-auto hover:cursor-pointer"
-            title="Usuń"
-          />
+          <button>
+            <FaMinusSquare
+              color="red"
+              className="ml-auto hover:cursor-pointer"
+              title="Usuń"
+              onClick={() => usunProduct(userGoods.nazwa)}
+            />
+          </button>
         </div>
       ))}
     </>
