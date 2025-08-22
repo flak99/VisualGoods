@@ -11,6 +11,10 @@ export function GoodList() {
     towar.nazwa.toLowerCase().includes(searchTerm.toLowerCase()),
   );
 
+  function SetVehicle() {
+    alert("Wybierz pojazd");
+  }
+
   return (
     <>
       <div className="m-auto mt-6 flex h-screen w-[87.5%] flex-col rounded-2xl bg-slate-50">
@@ -20,7 +24,7 @@ export function GoodList() {
           <Product filteredTowary={filteredTowary} towary={towary} />
         </div>
         <div className="flex h-[12.5%] w-full items-center justify-around">
-          <InfoButton buttonText={"Lista Pojazdów"} />
+          <InfoButton buttonText={"Wybierz pojazd"} onClick={SetVehicle} />
           <InfoButton buttonText={"Lista Towarów"} />
         </div>
       </div>

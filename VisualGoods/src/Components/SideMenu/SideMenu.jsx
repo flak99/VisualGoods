@@ -3,9 +3,12 @@ import { RiExpandDiagonalFill } from "react-icons/ri";
 import { ShrinkButton } from "./ShrinkButton";
 import { GoodList } from "./GoodList/GoodList";
 import { SelectedGoodsModal } from "../Modals/SelectedGoods/SelectedGoodsModal";
+import { ThreeJSContainer } from "./ThreeJS/ThreeJSContainer";
+import { VehicleChooseModal } from "./GoodList/VehicleChooseModal";
 
 export function SideMenu() {
   const [isHidden, setIsHidden] = useState(true);
+  const [vehicle, setVehicle] = useState("Truck");
 
   function onHandleHiding() {
     setIsHidden((prev) => !prev);
@@ -24,10 +27,18 @@ export function SideMenu() {
       )}
 
       {/* Tło - Panel ThreeJS */}
-      <div className="fixed inset-0 z-0 bg-gray-500"></div>
+      <div className="fixed inset-0 z-0 bg-gray-500">
+        <ThreeJSContainer
+          vehicle={vehicle}
+          setVehicle={setVehicle}
+        ></ThreeJSContainer>
+      </div>
 
       {/* Lista Wybranych Artykułów  */}
       <SelectedGoodsModal />
+
+      {/* {Wybór pojazdu} */}
+      <VehicleChooseModal />
 
       {/* Panel boczny  */}
       {!isHidden && (

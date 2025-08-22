@@ -7,7 +7,7 @@ import { ShowModalSubmitContext } from "../../../context/ShowSubmitModal";
 
 export function SelectedGoodsModal() {
   const modalContainer =
-    "fixed z-40 mt-30 ml-70 h-[60%] w-[30%] rounded-lg bg-slate-50";
+    "fixed z-40 mt-30 ml-70 h-[60%] w-[30%] rounded-lg bg-slate-50 opacity-75";
   const closeButtonArea =
     "m-3 ml-auto rounded-lg hover:cursor-pointer hover:bg-slate-100";
 

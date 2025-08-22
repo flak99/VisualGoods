@@ -5,13 +5,16 @@ import { SideMenu } from "./Components/SideMenu/SideMenu";
 import { SummaryElementsValueProvider } from "./context/SummaryElementsValueProvider";
 import { SelectedProductsListProvider } from "./context/SelectedProductsListContextProvider";
 import { ShowModalSubmitProvider } from "./context/ShowModalSubmitr";
+import { SetVehicleContextProvider } from "./context/SetVehicleContextProvider";
 
 createRoot(document.getElementById("root")).render(
-  <ShowModalSubmitProvider>
-    <SelectedProductsListProvider>
-      <SummaryElementsValueProvider>
-        <SideMenu />
-      </SummaryElementsValueProvider>
-    </SelectedProductsListProvider>
-  </ShowModalSubmitProvider>,
+  <SetVehicleContextProvider>
+    <ShowModalSubmitProvider>
+      <SelectedProductsListProvider>
+        <SummaryElementsValueProvider>
+          <SideMenu />
+        </SummaryElementsValueProvider>
+      </SelectedProductsListProvider>
+    </ShowModalSubmitProvider>
+  </SetVehicleContextProvider>,
 );
