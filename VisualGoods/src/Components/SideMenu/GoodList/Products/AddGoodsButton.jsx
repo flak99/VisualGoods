@@ -1,14 +1,17 @@
 import { useContext } from "react";
 import { FaPlusSquare } from "react-icons/fa";
 import { SelectedProductsListContext } from "../../../../context/SelectedProductsListContext";
+import { ShowModalSubmitContext } from "../../../../context/ShowSubmitModal";
 
 export function AddGoodsButton({ productsName }) {
   const colorForButton = "#589C10";
 
   const [, setAddedGoods] = useContext(SelectedProductsListContext);
+  const [, setIsHiddenModal] = useContext(ShowModalSubmitContext);
 
   function onHandleAddProduct(towar) {
     setAddedGoods((prev) => [...prev, towar]);
+    setIsHiddenModal(false);
   }
 
   return (

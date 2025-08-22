@@ -4,11 +4,14 @@ import { SideMenu } from "./Components/SideMenu/SideMenu";
 
 import { SummaryElementsValueProvider } from "./context/SummaryElementsValueProvider";
 import { SelectedProductsListProvider } from "./context/SelectedProductsListContextProvider";
+import { ShowModalSubmitProvider } from "./context/ShowModalSubmitr";
 
 createRoot(document.getElementById("root")).render(
-  <SelectedProductsListProvider>
-    <SummaryElementsValueProvider>
-      <SideMenu />
-    </SummaryElementsValueProvider>
-  </SelectedProductsListProvider>,
+  <ShowModalSubmitProvider>
+    <SelectedProductsListProvider>
+      <SummaryElementsValueProvider>
+        <SideMenu />
+      </SummaryElementsValueProvider>
+    </SelectedProductsListProvider>
+  </ShowModalSubmitProvider>,
 );
