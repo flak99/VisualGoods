@@ -1,15 +1,15 @@
 import { useContext } from "react";
 import { SimpleTrailer } from "./SimpleTrailer";
 import { SimpleTruck } from "./SimpleTruck";
-import { SetVehicleContext } from "../../../context/SetVehicleContext";
+import { ThreeJsVehicelContext } from "../../../context/SetThreJSVehicle";
 
 export function ThreeJSContainer() {
-  const [vehicle] = useContext(SetVehicleContext);
+  const [typVeh] = useContext(ThreeJsVehicelContext);
 
   return (
     <>
-      {vehicle === "Truck" && <SimpleTruck />}
-      {vehicle === "Trailer" && <SimpleTrailer />}
+      {typVeh === "Truck" && <SimpleTruck />}
+      {typVeh === "Trailer" && <SimpleTrailer />}
     </>
   );
 }

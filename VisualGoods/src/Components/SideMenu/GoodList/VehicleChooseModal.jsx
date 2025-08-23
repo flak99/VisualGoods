@@ -1,19 +1,23 @@
 import { IoClose } from "react-icons/io5";
-import { BsTruckFlatbed } from "react-icons/bs";
-import { FaTrailer } from "react-icons/fa6";
+import { useContext } from "react";
 import {
   modalBase,
   closeModal,
   buttonView,
   buttonsArea,
-} from "./OverlookVehicles";
-import { useState } from "react";
+} from "../../../styles/OverlookVehicles";
+import { SetVehicleContext } from "../../../context/SetVehicleContext";
+import { ThreeJsVehicelContext } from "../../../context/SetThreJSVehicle";
 
 export function VehicleChooseModal() {
-  const [isHiddenVehicleModla, setIsHiddenVehicleModal] = useState(false);
+  const [isHiddenVehicleModla, setIsHiddenVehicleModal] =
+    useContext(SetVehicleContext);
 
-  function HiddenModal() {
-    setIsHiddenVehicleModal((prev) => !prev);
+  const [, setTypeVeh] = useContext(ThreeJsVehicelContext);
+
+  function onHandleClick(text) {
+    setTypeVeh(text);
+    setIsHiddenVehicleModal(true);
   }
 
   return (
@@ -25,14 +29,20 @@ export function VehicleChooseModal() {
               className={closeModal}
               color="black"
               size={30}
-              onClick={() => HiddenModal()}
+              onClick={() => onHandleClick("")}
             />
           </div>
           <div className={buttonsArea}>
-            <button onClick={() => HiddenModal()} className={buttonView}>
+            <button
+              onClick={() => onHandleClick("Truck")}
+              className={buttonView}
+            >
               Ciężarówka z HDS
             </button>
-            <button onClick={() => HiddenModal()} className={buttonView}>
+            <button
+              onClick={() => onHandleClick("Trailer")}
+              className={buttonView}
+            >
               {" "}
               Naczepa{" "}
             </button>

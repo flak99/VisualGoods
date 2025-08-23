@@ -6,13 +6,16 @@ import { SummaryElementsValueProvider } from "./context/SummaryElementsValueProv
 import { SelectedProductsListProvider } from "./context/SelectedProductsListContextProvider";
 import { ShowModalSubmitProvider } from "./context/ShowModalSubmitr";
 import { SetVehicleContextProvider } from "./context/SetVehicleContextProvider";
+import { ThreeJsVehicelContextProvider } from "./context/SetThreeJSVehicle";
 
 createRoot(document.getElementById("root")).render(
   <SetVehicleContextProvider>
     <ShowModalSubmitProvider>
       <SelectedProductsListProvider>
         <SummaryElementsValueProvider>
-          <SideMenu />
+          <ThreeJsVehicelContextProvider>
+            <SideMenu />
+          </ThreeJsVehicelContextProvider>
         </SummaryElementsValueProvider>
       </SelectedProductsListProvider>
     </ShowModalSubmitProvider>

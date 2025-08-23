@@ -1,18 +1,22 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { InfoButton } from "../InfoButton";
 import { SearchInput } from "../SearchInput";
 import { Product } from "./Products/Product";
 import towary from "/Projekty/JavaScript/VisualGoods/VisualGoods/src/assets/data.json";
+import { SetVehicleContext } from "../../../context/SetVehicleContext";
 
 export function GoodList() {
   const [searchTerm, setSearchTerm] = useState("");
+  const [, setIsHiddenVehicleModal] = useContext(SetVehicleContext);
 
+  //Filtruje liste produktów
   const filteredTowary = towary.filter((towar) =>
     towar.nazwa.toLowerCase().includes(searchTerm.toLowerCase()),
   );
 
+  //Pokazuje modal z wyborem pojazdu
   function SetVehicle() {
-    alert("Wybierz pojazd");
+    setIsHiddenVehicleModal(false);
   }
 
   return (
